@@ -1,0 +1,10 @@
+/* custom.css */
+html,
+:root {
+  /* --- Cambiando Colores Principales --- */
+  --bs-primary: #6f42c1;         /* Cambia el color azul primario a morado */
+  --bs-secondary: #ff9900;       /* Cambia el color gris secundario a naranja */
+  --bs-success: #28a745;         /* Un verde un poco más brillante */
+  --bs-danger: #e63946;          /* Un rojo más intenso */
+
+}
