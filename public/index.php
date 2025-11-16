@@ -26,6 +26,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="nombre@ejemplo.com"
+            name="email"
           />
           <label for="floatingInput">Correo electrónico</label>
         </div>
@@ -35,6 +36,7 @@
             class="form-control"
             id="floatingPassword"
             placeholder="Contraseña"
+            name="password"
           />
           <label for="floatingPassword">Contraseña</label>
         </div>
