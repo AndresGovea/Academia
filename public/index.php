@@ -6,16 +6,64 @@
     <title>Iniciar Sesión - Academia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="css/index.css" rel="stylesheet">
-    
-    <link rel="icon" type="image/x-icon" href="img/logo.svg">
+    <link rel="icon" type="image/x-icon" href="img/school.svg">
 </head>
- <body class="d-flex align-items-center py-4" style="background-color: #A8DCD9;">
+<style>
+
+body {
+  background-color: #F4F6F5 !important;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  border-radius: 8px !important;
+  border: 1px solid #cfd6d3 !important;
+}
+
+.form-control:focus {
+  border-color: #60E069 !important;
+  box-shadow: 0 0 0 0.2rem rgba(96, 224, 105, 0.25) !important;
+}
+
+/* Botón verde personalizado */
+.btn-primary {
+  background-color: #60E069 !important;
+  border-color: #60E069 !important;
+  color: #0F1E3D !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #4AB655 !important;
+  border-color: #4AB655 !important;
+  color: white !important;
+}
+
+/* Enlaces */
+a {
+  color: #0F1E3D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #60E069;
+}
+</style>
+ <body class="d-flex align-items-center py-4">
     <main class="form-signin w-100 m-auto">
       <form action="../app/controllers/validarLogin.php" method="POST" >
         <img
           class="mb-4"
           src="img/logo.svg"
-          alt=""
+          alt="logo de Academia"
           width="72"
           height="57"
         />

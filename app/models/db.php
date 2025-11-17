@@ -1,7 +1,7 @@
 <?php
 $host = "HOST";
 $user = "USER";
-$pass = "PASSWORD";
+$pass = "PASS";
 $db = "academia";
 
 $conn = new mysqli($host,$user,$pass,$db);
