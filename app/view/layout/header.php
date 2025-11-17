@@ -1,30 +1,29 @@
- <header class="p-3 mb-3 border-bottom" style="background-color: #68C3B7;">
+ <header class="p-3 mb-3 border-bottom" style="background-color: #0F1E3D;">
         <div class="container">
           <div
             class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a
               href="#"
               class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-              <img src="../../public/img/logo.svg" alt="Logo Mercado Libre" width="40" height="32" class="me-3">
-            </a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#69e069" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-school"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></svg>            </a>
             <ul
               class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
             >
               <li>
-                <a href="dashboard.php" class="nav-link px-2 link-secondary">Inicio</a>
+                <a href="dashboard.php" class="nav-link px-2 link-secondary text-white">Inicio</a>
               </li>
               <li>
-                <a href="#" class="nav-link px-2 link-body-emphasis"
+                <a href="#" class="nav-link px-2 link-body-emphasis text-white"
                   >Mis cursos</a
                 >
               </li>
               <li>
-                <a href="#" class="nav-link px-2 link-body-emphasis"
+                <a href="#" class="nav-link px-2 link-body-emphasis text-white"
                   >Historial</a
                 >
               </li>
               <li>
-                <a href="#" class="nav-link px-2 link-body-emphasis"
+                <a href="#" class="nav-link px-2 link-body-emphasis text-white"
                   >Favoritos</a
                 >
               </li>
@@ -45,19 +44,19 @@
                 aria-expanded="false"
               >
                 <img
-                  src="../../public/img/miguel_angel.jpg"
-                  alt="mdo"
+                  src="../../public/img/sin_foto.png"
+                  alt="Foto de perfil"
                   width="32"
                   height="32"
                   class="rounded-circle"
                 />
               </a>
               <ul class="dropdown-menu text-small">
-                <li><a class="dropdown-item" href="#">Nuevo curso...</a></li>
+                <li><a class="dropdown-item" href="#">Nuevo curso</a></li>
                 <li><a class="dropdown-item" href="./configuracion.php">Configuración</a></li>
                 <li><a class="dropdown-item" href="./perfil.php">Perfil</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="./logout.php">Cerrar sesión</a></li>
+                <li><a class="dropdown-item" href="../view/logout.php">Cerrar sesión</a></li>
               </ul>
             </div>
           </div>

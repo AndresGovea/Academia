@@ -1,10 +1,10 @@
 <?php
 session_start();
  include ('../models/db.php');    
- $usuario = $_POST['email'];
- $contrasena =$_POST['contrasena'];
+ $email = $_POST['email'];
+ $contrasena =$_POST['password'];
 
-$q = "SELECT COUNT(*) as contar FROM usuario WHERE email ='$usuario' AND contrasena ='$contrasena'";
+$q = "SELECT COUNT(*) as contar FROM usuario WHERE email ='$email' AND contrasena ='$contrasena'";
 
 $consulta = mysqli_query($conn,$q);
 

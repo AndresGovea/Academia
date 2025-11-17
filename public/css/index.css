@@ -1,26 +1,51 @@
-html,
+/* === Fondo general del login === */
 body {
-  height: 100%;
-  --bg-yellow:#FEE600;
+  background-color: #F4F6F5 !important; /* opción 1 */
+  /* background-color: #FFFFFF !important;  opción 2 */
+  /* background-color: #E9FBEF !important;  opción 3 */
 }
 
+/* === Estilo del formulario === */
 .form-signin {
   max-width: 330px;
-  padding: 1rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
+/* Inputs con estilo más limpio */
+.form-control {
+  border-radius: 8px !important;
+  border: 1px solid #cfd6d3 !important;
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.form-control:focus {
+  border-color: #60E069 !important;
+  box-shadow: 0 0 0 0.2rem rgba(96, 224, 105, 0.25) !important;
 }
 
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+/* Botón verde personalizado */
+.btn-primary {
+  background-color: #60E069 !important;
+  border-color: #60E069 !important;
+  color: #0F1E3D !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #4AB655 !important;
+  border-color: #4AB655 !important;
+  color: white !important;
+}
+
+/* Enlaces */
+a {
+  color: #0F1E3D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #60E069;
 }
