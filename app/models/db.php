@@ -1,8 +1,8 @@
 <?php
-$host = "HOST";
-$user = "USER";
-$pass = "PASS";
-$db = "academia";
+$host = "localhost";
+$user = "root";
+$pass = "123456";
+$db = "academia_meli";
 
 $conn = new mysqli($host,$user,$pass,$db);
 

@@ -1,8 +1,13 @@
 /* === Fondo general del login === */
 body {
+<<<<<<< HEAD
   background-color: #F4F6F5 !important; /* opción 1 */
   /* background-color: #FFFFFF !important;  opción 2 */
   /* background-color: #E9FBEF !important;  opción 3 */
+=======
+  height: 100%;
+  --bg-yellow:#A8DCD9;
+>>>>>>> dfac47782033c1826c4922fee6d04ec5e8e47103
 }
 
 /* === Estilo del formulario === */
