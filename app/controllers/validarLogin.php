@@ -1,6 +1,7 @@
 <?php
 session_start();
  include ('../models/db.php');    
+
  $email = $_POST['email'];
  $contrasena =$_POST['password'];
 
