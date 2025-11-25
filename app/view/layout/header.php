@@ -44,7 +44,7 @@
                 aria-expanded="false"
               >
                 <img
-                  src="../../public/img/sin_foto.png"
+                  src="../../public/img/foto_perfil.jpg"
                   alt="Foto de perfil"
                   width="32"
                   height="32"

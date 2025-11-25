@@ -1,4 +1,5 @@
 <?php
+
 $host = "HOST";
 $user = "USER";
 $pass = "PASS";

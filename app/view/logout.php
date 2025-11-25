@@ -14,7 +14,7 @@
             <h4 class="alert-heading">Has cerrado sesión correctamente.</h4>
             <p>Gracias por visitarnos. ¡Hasta pronto!</p>
             <hr>
-            <a href="../../../public/index.php" class="btn btn-primary mt-3">Volver a la página de inicio</a>
+            <a href="./../../public/index.php" class="btn btn-primary mt-3">Volver a la página de inicio</a>
         </div>
     </main>
     <?php include 'layout/footer.php'; ?>
