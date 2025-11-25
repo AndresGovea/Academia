@@ -2,9 +2,9 @@
 session_start();
  include ('../models/db.php');    
  $email = $_POST['email'];
- $contrasena =$_POST['password'];
+ $password =$_POST['password'];
 
-$q = "SELECT COUNT(*) as contar FROM usuario WHERE email ='$email' AND contrasena ='$contrasena'";
+$q = "SELECT COUNT(*) as contar FROM usuario WHERE email ='$email' AND password ='$password'";
 
 $consulta = mysqli_query($conn,$q);
 
