@@ -1,22 +1,24 @@
 <?php
 session_start();
- include ('../models/db.php');    
+include('../models/db.php');
 
- $email = $_POST['email'];
- $password =$_POST['password'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-$q = "SELECT COUNT(*) as contar FROM usuario WHERE email ='$email' AND contrasena ='$password'";
+$q = "SELECT * FROM usuario WHERE email ='$email' AND contrasena ='$password'";
 
-$consulta = mysqli_query($conn,$q);
+$consulta = mysqli_query($conn, $q);
 
-$array=mysqli_fetch_array($consulta);
+if (mysqli_num_rows($consulta) > 0) {
+    
+    $datos_usuario = mysqli_fetch_array($consulta);
+    $_SESSION['email'] = $email;
+    
+    $_SESSION['rol'] = $datos_usuario['rol']; 
 
-if( $array['contar']>0){
-
-    $_SESSION['email']=$email;
     header("location: ../view/dashboard.php");
 
-}else{
+} else {
     header("location: ../../public/index.php");
 }
 ?>
