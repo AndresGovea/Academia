@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+
+$_SESSION = array();
+
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
+}
+
+session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +25,7 @@
 </head>
 <body>
     <?php include 'layout/header.php'; ?>
+    
     <main class="container py-5">
         <div class="alert alert-info text-center" role="alert">
             <h4 class="alert-heading">Has cerrado sesión correctamente.</h4>
@@ -17,6 +34,7 @@
             <a href="./../../public/index.php" class="btn btn-primary mt-3">Volver a la página de inicio</a>
         </div>
     </main>
+
     <?php include 'layout/footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
