@@ -15,7 +15,7 @@ if (ini_get("session.use_cookies")) {
 session_destroy();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,6 @@ session_destroy();
 </head>
 <body>
     <?php include 'layout/header.php'; ?>
-    
     <main class="container py-5">
         <div class="alert alert-info text-center" role="alert">
             <h4 class="alert-heading">Has cerrado sesión correctamente.</h4>

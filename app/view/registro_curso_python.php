@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,57 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="../../public/css/style.css" rel="stylesheet">
     <title>Registro - Academia</title>
 </head>
 <body class="roboto-tipografia">
-<style>
-body {
-  background-color: #F4F6F5 !important;
-}
-
-.form-signin {
-  max-width: 330px;
-  padding: 2rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.form-control {
-  border-radius: 8px !important;
-  border: 1px solid #cfd6d3 !important;
-}
-
-.form-control:focus {
-  border-color: #60E069 !important;
-  box-shadow: 0 0 0 0.2rem rgba(96, 224, 105, 0.25) !important;
-}
-
-/* Botón verde personalizado */
-.btn-primary {
-  background-color: #60E069 !important;
-  border-color: #60E069 !important;
-  color: #0F1E3D !important;
-  font-weight: 600;
-  border-radius: 8px;
-}
-
-.btn-primary:hover {
-  background-color: #4AB655 !important;
-  border-color: #4AB655 !important;
-  color: white !important;
-}
-
-/* Enlaces */
-a {
-  color: #0F1E3D;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #60E069;
-}
-</style>
     <?php include ('layout/header.php');?>
     <main>
         <div class="mt-4 text-center border-bottom">

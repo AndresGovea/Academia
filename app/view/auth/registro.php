@@ -2,25 +2,25 @@
 include('../../models/db.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Capturar cada campo en su propia variable
-    $nombre     = $_POST['nombre'];
-    $ap_paterno = $_POST['ap_paterno'];
-    $ap_materno = $_POST['ap_materno'];
-    $email      = $_POST['email'];
-    $telefono   = $_POST['telefono'];
-    $contrasena = $_POST['contrasena'];
+  // Capturar cada campo en su propia variable
+  $nombre     = $_POST['nombre'];
+  $ap_paterno = $_POST['ap_paterno'];
+  $ap_materno = $_POST['ap_materno'];
+  $email      = $_POST['email'];
+  $telefono   = $_POST['telefono'];
+  $contrasena = $_POST['contrasena'];
 
-    // Preparar la sentencia SQL con placeholders
-    $sql = "INSERT INTO usuario (nombre, ap_paterno, ap_materno, email, telefono, contrasena) 
-            VALUES ('$nombre', '$ap_paterno', '$ap_materno', '$email', '$telefono', '$contrasena')";
+  // Preparar la sentencia SQL con placeholders
+  $sql = "INSERT INTO usuario (nombre, ap_paterno, ap_materno, email, telefono, contrasena) 
+      VALUES ('$nombre', '$ap_paterno', '$ap_materno', '$email', '$telefono', '$contrasena')";
 
-    // Preparar la consulta
-    if ($conn->query($sql) === TRUE) {
-        header('Location: ./registro.php');
-        exit();
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+  // Preparar la consulta
+  if ($conn->query($sql) === TRUE) {
+    header('Location: ./registro.php');
+    exit();
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
 }
 ?>
 <!doctype html>
@@ -29,61 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="../../../public/img/school.svg">
-    <title>Registro -Academia</title>
+    <title>Registro - Academia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../public/css/style.css">
   </head>
-  <style>
 
-body {
-  background-color: #F4F6F5 !important; /* opción 1 */
-  /* background-color: #FFFFFF !important;  opción 2 */
-  /* background-color: #E9FBEF !important;  opción 3 */
-}
-
-.form-signin {
-  max-width: 330px;
-  padding: 2rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-
-.form-control {
-  border-radius: 8px !important;
-  border: 1px solid #cfd6d3 !important;
-}
-
-.form-control:focus {
-  border-color: #60E069 !important;
-  box-shadow: 0 0 0 0.2rem rgba(96, 224, 105, 0.25) !important;
-}
-
-/* Botón verde personalizado */
-.btn-primary {
-  background-color: #60E069 !important;
-  border-color: #60E069 !important;
-  color: #0F1E3D !important;
-  font-weight: 600;
-  border-radius: 8px;
-}
-
-.btn-primary:hover {
-  background-color: #4AB655 !important;
-  border-color: #4AB655 !important;
-  color: white !important;
-}
-
-/* Enlaces */
-a {
-  color: #0F1E3D;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #60E069;
-}
-</style>
   <body style="background-color: #A8DCD9;">
     <div class="container">
       <main>
@@ -136,16 +86,18 @@ a:hover {
               <hr class="my-4">
 
               <input id="submitBtn" class="w-100 btn btn-primary btn-lg" type="submit" value="Registrarse" title="Registrarse" aria-label="Registrarse">
-
             </form>
-              <div class="text-center mt-3">
-                ¿Ya tienes una cuenta? <a href="../../../public/index.php">Iniciar sesión</a>
-              </div>
+
+            <div class="text-center mt-3">
+              ¿Ya tienes una cuenta? <a href="../../../public/index.php">Iniciar sesión</a>
+            </div>
           </div>
         </div>
+
         <br><br>
       </main>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>

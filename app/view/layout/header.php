@@ -23,8 +23,6 @@
                 </li>
 
                 <?php 
-                // Verificamos si existe la sesión 'rol' y si su valor es 'admin'
-                // Si en tu base de datos el administrador es el número 1, pon: $_SESSION['rol'] == 1
                 if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') { 
                 ?>
                     <li>
