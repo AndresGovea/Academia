@@ -294,4 +294,4 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
 INSERT INTO usuario(nombre, ap_paterno, ap_materno, email, telefono, contrasena, rol) 
-VALUES('Jose', 'Perez', 'García', 'josegarcia@academia.com', '5544667788', '123456', 'admin');
+VALUES('Jose', 'Perez', 'García', 'admin@academia.com', '5544667788', '123456', 'admin');
