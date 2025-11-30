@@ -295,11 +295,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 INSERT INTO usuario(nombre, ap_paterno, ap_materno, email, telefono, contrasena, rol) 
 VALUES('Jose', 'Perez', 'García', 'admin@academia.com', '5544667788', '123456', 'admin'),
-      ('Ejemplo', 'de', 'registros', 'ejemplo@academia.com', '5511223344', 'contrasena', 'empleado'),
-      ('Ejemplo', 'de', 'registros', 'ejemplo@academia.com', '5511223344', 'contrasena', 'empleado'),
-      ('Ejemplo', 'de', 'registros', 'ejemplo@academia.com', '5511223344', 'contrasena', 'empleado'),
-      ('Ejemplo', 'de', 'registros', 'ejemplo@academia.com', '5511223344', 'contrasena', 'empleado'),
-      ('Ejemplo', 'de', 'registros', 'ejemplo@academia.com', '5511223344', 'contrasena', 'empleado'),
-      ('Ejemplo', 'de', 'registros', 'ejemplo@academia.com', '5511223344', 'contrasena', 'empleado'),
-      ('Ejemplo', 'de', 'registros', 'ejemplo@academia.com', '5511223344', 'contrasena', 'empleado'),
-      ('Ejemplo', 'de', 'registros', 'ejemplo@academia.com', '5511223344', 'contrasena', 'empleado');
+      ('Juan', 'Lopez', 'Martinez', 'juan@academia.com', '5511223344', 'password123', 'empleado'),
+        ('Maria', 'Garcia', 'Rodriguez', 'maria@academia.com', '5522334455', 'password123', 'empleado'),
+        ('Carlos', 'Martinez', 'Lopez', 'carlos@academia.com', '5533445566', 'password123', 'empleado'),
+        ('Ana', 'Rodriguez', 'Garcia', 'ana@academia.com', '5544556677', 'password123', 'empleado'),
+        ('Pedro', 'Sanchez', 'Torres', 'pedro@academia.com', '5555667788', 'password123', 'proveedor'),
+        ('Sofia', 'Flores', 'Morales', 'sofia@academia.com', '5566778899', 'password123', 'empleado'),
+        ('Luis', 'Vargas', 'Castillo', 'luis@academia.com', '5577889900', 'password123', 'empleado'),
+        ('Carmen', 'Rios', 'Peña', 'carmen@academia.com', '5588990011', 'password123', 'empleado');
