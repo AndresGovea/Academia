@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <main>
         <div class="py-5 text-center">
           <h2>Formulario de Registro</h2>
-          <p class="lead">Completa tus datos para registrar.</p>
+          <p class="lead">Completa los datos para registrar.</p>
         </div>
 
         <div class="row g-5">
@@ -54,19 +54,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nombre</label>
                   <input name="nombre" type="text" class="form-control" id="firstName" required>
-                  <div class="invalid-feedback">Ingresa tu nombre.</div>
+                  <div class="invalid-feedback">Ingresa nombre.</div>
                 </div>
 
                 <div class="col-sm-6">
                   <label for="lastName" class="form-label">Apellido paterno</label>
                   <input name="ap_paterno" type="text" class="form-control" id="lastName" required>
-                  <div class="invalid-feedback">Ingresa tu apellido paterno.</div>
+                  <div class="invalid-feedback">Ingresa apellido paterno.</div>
                 </div>
 
                 <div class="col-12">
                   <label for="middleName" class="form-label">Apellido materno</label>
                   <input name="ap_materno" type="text" class="form-control" id="middleName">
-                  <div class="invalid-feedback">Ingresa tu apellido materno.</div>
+                  <div class="invalid-feedback">Ingresa apellido materno.</div>
                 </div>
 
                 <div class="col-12">
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="col-12">
                   <label for="telefono" class="form-label">Teléfono</label>
                   <input name="telefono" type="tel" class="form-control" id="telefono" required>
-                  <div class="invalid-feedback">Ingresa tu número de teléfono.</div>
+                  <div class="invalid-feedback">Ingresa número de teléfono.</div>
                 </div>
 
                 <div class="col-12">
@@ -92,37 +92,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
               <button class="w-100 btn btn-primary btn-lg" type="submit">Registrar</button>
             </form>
-
-            <?php if (!$esAltaAdmin) { ?>
-              <div class="text-center mt-3">
-                ¿Ya tienes una cuenta? <a href="../../../public/index.php">Iniciar sesión</a>
-              </div>
-            <?php } ?>
           </div>
         </div>
-
         <br><br>
       </main>
     </div>
-
       <?php include 'layout/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // Validación de Bootstrap (puedes dejarla o quitarla si no la usas)
-      (function () {
-        'use strict';
-        const forms = document.querySelectorAll('.needs-validation');
-        Array.prototype.slice.call(forms).forEach(function (form) {
-          form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      })();
-    </script>
   </body>
 </html>
