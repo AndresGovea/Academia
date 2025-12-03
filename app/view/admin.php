@@ -1,4 +1,4 @@
-<?php include 'auth/auth.php'; ?>
+<?php include 'auth/check_admin.php'; ?>
 
 <?php
 require_once('../models/db.php');
