@@ -1,5 +1,4 @@
 <?php include 'auth/check_admin.php'; ?>
-
 <?php
 require_once('../models/db.php');
 
@@ -13,7 +12,6 @@ if (isset($_POST['actualizar'])) {
     $rol = $_POST['rol'];
 
     $sql = "UPDATE usuario SET nombre='$nombre', ap_paterno='$ap_paterno', ap_materno='$ap_materno', email='$email', telefono='$telefono', rol='$rol' WHERE id_usuario='$id'";
-    
     if ($conn->query($sql) === TRUE) {
         header("Location: admin.php");
         exit();
@@ -37,90 +35,80 @@ $result = $conn->query($query);
     <title>Administrar - Academia</title>
 </head>
 <body>
-    <?php include ('layout/header.php');?>
-    
-    <div class="container fluid mt-5">
+<?php include ('layout/header.php'); ?>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between">
         <h1>Usuarios</h1>
-
-        <form action="admin.php" method="POST" id="form-edicion"></form>
-
-        <table class="table table-striped table-hover align-middle mt-4">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido P.</th>
-                    <th>Apellido M.</th>
-                    <th>Correo</th>
-                    <th>Teléfono</th>
-                    <th>Rol</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while($row = $result->fetch_assoc()) { ?>
-                    
-                    <?php if ($id_a_editar == $row['id_usuario']) { ?>
-                        
-                        <tr class="table-warning border border-warning">
-                            <td>
-                                <?php echo $row['id_usuario']; ?>
-                                <!-- Input oculto para saber a quién actualizamos -->
-                                <input type="hidden" name="id_usuario" value="<?php echo $row['id_usuario']; ?>" form="form-edicion">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" name="nombre" value="<?php echo $row['nombre']; ?>" form="form-edicion">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" name="ap_paterno" value="<?php echo $row['ap_paterno']; ?>" form="form-edicion">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" name="ap_materno" value="<?php echo $row['ap_materno']; ?>" form="form-edicion">
-                            </td>
-                            <td>
-                                <input type="email" class="form-control" name="email" value="<?php echo $row['email']; ?>" form="form-edicion">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" name="telefono" value="<?php echo $row['telefono']; ?>" form="form-edicion">
-                            </td>
-                            <td>
-                                <select class="form-select" name="rol" form="form-edicion">
-                                    <option value="empleado" <?php if($row['rol']=='empleado') echo 'selected'; ?>>empleado</option>
-                                    <option value="proveedor" <?php if($row['rol']=='proveedor') echo 'selected'; ?>>Proveedor</option>
-                                    <option value="admin" <?php if($row['rol']=='admin') echo 'selected'; ?>>Admin</option>
-                                </select>
-                            </td>
-                            <td>
-                                <button type="submit" name="actualizar" class="btn btn-success btn-sm mb-1" form="form-edicion">Guardar</button>
-                                <a href="admin.php" class="btn btn-secondary btn-sm">Cancelar</a>
-                            </td>
-                        </tr>
-
-                    <?php } else { ?>
-                        <tr>
-                            <td><?php echo $row['id_usuario']; ?></td>
-                            <td><?php echo $row['nombre']; ?></td>
-                            <td><?php echo $row['ap_paterno']; ?></td>
-                            <td><?php echo $row['ap_materno']; ?></td>
-                            <td><?php echo $row['email']; ?></td>
-                            <td><?php echo $row['telefono']; ?></td>
-                            <td>
-                                <span class="badge <?php echo ($row['rol']=='admin') ? 'text-bg-danger' : 'text-bg-primary'; ?>">
-                                    <?php echo $row['rol']; ?>
-                                </span>
-                            </td>
-                            <td>
-                                <a href="admin.php?editar=<?php echo $row['id_usuario']; ?>" class="btn btn-warning btn-sm">Editar</a>
-                                <a href="../models/delete.php?id_usuario=<?php echo $row['id_usuario']; ?>" class="btn btn-danger btn-sm">Eliminar</a>
-                            </td>
-                        </tr>
-                    <?php } ?>
-                <?php } ?>
-            </tbody>
-        </table>
+        <a href="agregar_usuario.php" class="btn btn-primary btn-sm">Agregar usuario</a>
     </div>
-    <br><br><br><br><br><br><br>
-    <?php include ('layout/footer.php');?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <table class="table table-striped table-hover align-middle mt-4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido P.</th>
+                <th>Apellido M.</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php while ($row = $result->fetch_assoc()) { ?>
+            <?php if ($id_a_editar == $row['id_usuario']) { ?>
+            <tr class="table-warning border border-warning">
+                <form action="admin.php" method="POST">
+                    <td>
+                        <?php echo $row['id_usuario']; ?>
+                        <input type="hidden" name="id_usuario" value="<?php echo $row['id_usuario']; ?>">
+                    </td>
+                    <td><input type="text" class="form-control" name="nombre" value="<?php echo $row['nombre']; ?>"></td>
+                    <td><input type="text" class="form-control" name="ap_paterno" value="<?php echo $row['ap_paterno']; ?>"></td>
+                    <td><input type="text" class="form-control" name="ap_materno" value="<?php echo $row['ap_materno']; ?>"></td>
+                    <td><input type="email" class="form-control" name="email" value="<?php echo $row['email']; ?>"></td>
+                    <td><input type="text" class="form-control" name="telefono" value="<?php echo $row['telefono']; ?>"></td>
+                    <td>
+                        <select class="form-select" name="rol">
+                            <option value="empleado" <?php if($row['rol']=='empleado') echo 'selected'; ?>>Empleado</option>
+                            <option value="proveedor" <?php if($row['rol']=='proveedor') echo 'selected'; ?>>Proveedor</option>
+                            <option value="admin" <?php if($row['rol']=='admin') echo 'selected'; ?>>Admin</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit" name="actualizar" class="btn btn-success btn-sm mb-1">Guardar</button>
+                        <a href="admin.php" class="btn btn-secondary btn-sm">Cancelar</a>
+                    </td>
+                </form>
+            </tr>
+            <?php } else { ?>
+            <tr>
+                <td><?php echo $row['id_usuario']; ?></td>
+                <td><?php echo $row['nombre']; ?></td>
+                <td><?php echo $row['ap_paterno']; ?></td>
+                <td><?php echo $row['ap_materno']; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['telefono']; ?></td>
+                <td>
+                    <span class="badge <?php echo ($row['rol']=='admin') ? 'text-bg-danger' : 'text-bg-primary'; ?>">
+                        <?php echo $row['rol']; ?>
+                    </span>
+                </td>
+                <td>
+                    <a href="admin.php?editar=<?php echo $row['id_usuario']; ?>" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="../models/delete.php?id_usuario=<?php echo $row['id_usuario']; ?>" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            <?php } ?>
+        <?php } ?>
+        </tbody>
+    </table>
+</div>
+
+<br><br><br><br>
+<?php include ('layout/footer.php'); ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
