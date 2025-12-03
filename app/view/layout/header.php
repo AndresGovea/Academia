@@ -35,7 +35,7 @@
                     </li>
                     <li>
                         <!-- IMPORTANTE: parámetro from=admin para saber que vienes desde Alta usuario -->
-                        <a href="auth/registro.php?from=admin" class="nav-link px-2 link-body-emphasis text-white">Alta usuario</a>
+                        <a href="registro.php" class="nav-link px-2 link-body-emphasis text-white">Alta usuario</a>
                     </li>
                 <?php 
                 } 

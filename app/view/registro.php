@@ -1,7 +1,7 @@
 <?php include 'auth/check_admin.php'; ?>
 
 <?php
-include('../../models/db.php');
+include('../models/db.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Capturar cada campo en su propia variable
