@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="row g-5">
           <div class="col-md-6 mx-auto">
-            <form id="registerForm" class="needs-validation" novalidate action="registro.php<?php echo $esAltaAdmin ? '?from=admin' : ''; ?>" method="POST">
+            <form id="registerForm" class="needs-validation" action="registro.php" method="POST">
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nombre</label>
