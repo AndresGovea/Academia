@@ -1,3 +1,5 @@
+<?php include 'auth/auth.php'; ?>
+
 <?php
 require_once('../models/db.php');
 

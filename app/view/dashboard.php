@@ -1,11 +1,5 @@
-<?php
-    session_start();
-    $email = $_SESSION['email'];
 
-    if (!isset($email)) {
-        header("location: ../public/index.php");
-    } else {
-?>
+<?php include 'auth/auth.php'; ?>
 
 <!DOCTYPE html>
 <html lang="es-MX">
@@ -108,6 +102,3 @@
     </script>
 </body>
 </html>
-<?php
-}
-?>
