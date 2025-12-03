@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <main>
         <div class="py-5 text-center">
           <h2>Formulario de Registro</h2>
-          <p class="lead">Completa tus datos para registrarte.</p>
+          <p class="lead">Completa tus datos para registrar.</p>
         </div>
 
         <div class="row g-5">
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
               <hr class="my-4">
 
-              <button class="w-100 btn btn-primary btn-lg" type="submit">Registrarme</button>
+              <button class="w-100 btn btn-primary btn-lg" type="submit">Registrar</button>
             </form>
 
             <?php if (!$esAltaAdmin) { ?>
