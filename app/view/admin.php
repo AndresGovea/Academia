@@ -40,7 +40,7 @@ $result = $conn->query($query);
 <div class="container mt-5">
     <div class="d-flex justify-content-between">
         <h1>Usuarios</h1>
-        <a href="agregar_usuario.php" class="btn btn-primary btn-sm">Agregar usuario</a>
+        <a href="registro.php" class="btn btn-primary btn-sm">Agregar usuario</a>
     </div>
 
     <table class="table table-striped table-hover align-middle mt-4">

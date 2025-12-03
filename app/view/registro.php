@@ -38,9 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </head>
 
   <body style="background-color: #A8DCD9;">
-    <?php if ($esAltaAdmin) { ?>
-      <?php include '../layout/header.php'; ?>
-    <?php } ?>
+      <?php include 'layout/header.php'; ?>
 
     <div class="container">
       <main>
@@ -107,9 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </main>
     </div>
 
-    <?php if ($esAltaAdmin) { ?>
-      <?php include '../layout/footer.php'; ?>
-    <?php } ?>
+      <?php include 'layout/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
